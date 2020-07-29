@@ -2,7 +2,7 @@ const net = require('net');
 
 const connect = function() {
   const conn = net.createConnection( {
-    host: '10.0.2.15',
+    host:"localhost",
     port: 50541
   });
 
@@ -23,17 +23,7 @@ const connect = function() {
     conn.write('Name: DHN');
   });
 
-  // conn.on('connect', () => {
-  //   setTimeout( () => conn.write("Move: down"), 1000);
-  // });
 
-  // conn.on('connect', () => {
-  //   setTimeout( () => conn.write("Move: down"), 1500);
-  // });
-
-  // conn.on('connect', () => {
-  //   setInterval( () => conn.write("Move: left"), 2000);
-  // });
 
    return conn;
 };
